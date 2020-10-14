@@ -1,0 +1,111 @@
+% !TEX program = lualatex
+
+\documentclass[11pt]{article}
+\usepackage{parskip} % To skip indentations %
+\usepackage{enumitem} % Reduce space in itemize %
+\pagenumbering{gobble} % Remove page numbers %
+\usepackage[draft=false]{hyperref} % Add hyperlinks %
+
+% Colors %
+\usepackage{xcolor}
+\definecolor{black}{HTML}{626162}
+\definecolor{blacker}{HTML}{000000}
+\definecolor{blue}{HTML}{4185F5}
+\definecolor{darkblue}{HTML}{3164B7}
+\definecolor{red}{HTML}{E14434}
+\definecolor{green}{HTML}{0D9D5C}
+\definecolor{yellow}{HTML}{F3B403}
+
+% Font % 
+\usepackage{fontspec}
+\setmainfont[ExternalLocation=fonts/roboto/]{regular.ttf}[
+    BoldFont=bold.ttf,
+    ItalicFont=italic.ttf,
+    BoldItalicFont=bolditalic.ttf]
+%\setmainfont{Arial}
+
+% Paper Size % 
+\usepackage{geometry}
+\geometry{letterpaper, portrait, margin=0.5in}
+
+% Commands %
+\let\origsection\section
+\renewcommand{\section}[2]{
+    \origsection*{\LARGE \color{#2}#1} \hrule
+}
+
+\renewcommand{\subsection}[4]{
+    \textcolor{#4}{\large \textbf{#1} \textit{-- #2} \hfill {#3}}
+}
+
+\begin{document}
+% Header %
+{\large
+    {\Huge Tommy Josepovic} \hfill  \textbf{\href{http://www.github.com/tommy-josepovic}{github.com/tommy-josepovic}}\\
+    tommy.josepovic@gmail.com\hfill Typescript, Python, Java, .NET,\\
+    +1 (438) 497-4978 \hfill Angular, React, GraphQL, Flask
+    % \hspace*{0pt} to make \hfill work on new lines
+}
+
+% Education %
+\section{Education}{blacker}
+\subsection{Concordia University}{B. Software Engineering}{September 2018 -- Present}{blacker}
+\begin{itemize}[noitemsep]
+    \item 3.82 / 4.30 GPA
+    \item Dean's List
+    \item Co-op student
+    \item Graduation in May 2022
+    
+\end{itemize}
+\subsection{Jean-de-Brébeuf College}{D.E.C. Sciences, Letters and Arts}{September 2016 -- May 2018}{blacker}
+
+% Experience %
+\section{Experience}{blacker}
+\subsection{Desjardins Group}{Programmer}{May 2020 -- Present}{blacker}
+\begin{itemize}[noitemsep]
+    \item Reduced deployment time from 10 minutes to 5 minutes by rebuilding our pipelines.
+    \item Migrated our repository from TFS to Azure DevOps.
+    \item Built a C\# application to automatically migrate our backlog from TFS to Jira Server.
+    \item Modernized the front-end of our .NET application by migrating to new technologies.
+\end{itemize}
+\subsection{Diff Agency}{Web Developer}{August 2019 -- December 2019}{blacker}
+\begin{itemize}[noitemsep]
+    \item Developed many pages and features for the Shopify websites of different clients.
+    \item Ensured websites were compliant to modern web accessibility standards.
+    \item Efficiently worked in different teams and on many projects.
+\end{itemize}
+
+% Projects %
+\section{Projects}{blacker}
+\subsection{EmotionLive}{Angular, Typescript, Firebase}{}{blacker}
+\begin{itemize}[noitemsep]
+    \item Collaborated on an application meant to help children with disabilities recognize and learn emotions by playing small web games. 
+    \item Won the popularity prize against 120 other teams during Concordia's 2020 ConUHacks.
+\end{itemize}
+
+\subsection{ror2-editor}{React, Typescript}{}{blacker}
+\begin{itemize}[noitemsep]
+    \item Built a web app to allow people to modify their savefiles for the video game Risk of Rain 2.
+\end{itemize}
+
+%\subsection{Shoppies}{React, GraphQL, Apollo, Typescript}{blacker}
+%\begin{itemize}
+%    \item Built Shoppies, a movie browser web app built on top of the OMDB API. 
+%\end{itemize}
+
+%\subsection{tommy-josepovic.github.io}{Gatsby, GraphQL, Typescript}{}{blacker}
+%\begin{itemize}[noitemsep]
+%    \item Built a modern JAMStack personal site with Gatsby.
+%\end{itemize}
+
+\subsection{ShutterFeed}{Angular, Typescript, Firebase}{}{blacker}
+\begin{itemize}[noitemsep]
+    \item Developed  an image sharing social platform.
+    \item 3 month group project made following Agile development practices.
+\end{itemize}
+
+% Activity & Rewards %
+\section{Activity \& Rewards}{blacker}
+Junior Achievement Quebec VP TI Award, Golden Key Society Invitation, Musical Theatre Actor, Volleyball.
+
+\end{document}
